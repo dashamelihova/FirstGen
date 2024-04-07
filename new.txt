@@ -1,0 +1,3 @@
+count files: 10
+count pictures: 1
+count classes: 7
