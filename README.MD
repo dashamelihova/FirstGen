@@ -1,8 +1,11 @@
 # Grup
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/grup`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem is used for getting metrics of your path to directory. The output of this code will be:
+1) Amount of lines in file
+2) Amount of files (and it's extensions such as .cpp, .txt, .rb and e.t.c.)
+3) Amount of methods in file
+4) Amount of files-images (.png, .jpg and e.t.c.)
+5) The destination directory (if there're different folders in path)
 
 ## Installation
 
@@ -17,12 +20,7 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
-To use this GEM, you need to paste the path to your directory as input. The output of this code will be metrics:
-1) Amount of lines in file
-2) Amount of files (and it's extensions such as .cpp, .txt, .rb and e.t.c.)
-3) Amount of methods in file
-4) Amount of files-images (.png, .jpg and e.t.c.)
-5) The destination directoty (if there're different folders in path)
+ нашем геме существует единственный класс, который содержить имя папки для которой мы будем считать метрику. И в классе есть один публичный метод который создает файл со всей посчитаной метрикой
 
 ## Development
 
