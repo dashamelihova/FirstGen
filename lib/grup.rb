@@ -10,12 +10,12 @@ module Grup
     end
 
     def calculate_metrics(output_file)
-		files = Dir.glob(File.join(@code_dir, '**', '*.{rb,jpg,py,java}'))
+		files = Dir.glob(File.join(@code_dir, '**', '*.{rb,png,jpg,webp,webm,py,java}'))
 		classes = 0
-		count_jpg = 0 #count pictures
+		count_image = 0
 		files.each do |f|
-			if f.end_with? '.jpg'
-				count_jpg += 1 
+			if f.end_with?('.jpg') || f.end_with?('.png') || f.end_with?('.webp') || f.end_with?('.webm') #tried ['.jpg', '.png', '.webp', '.webm'].include?(f.extname) but gives error on .py
+				count_image += 1 
 			else
 				classes += count_classes(f)
 
@@ -26,10 +26,15 @@ module Grup
 		File.open(output_file, 'w')do |file|
 
 			file.puts "count files: " + files.count.to_s
-			file.puts "count pictures: " + count_jpg.to_s
+			file.puts "count pictures: " + count_image.to_s
 			file.puts "count classes: " + classes.to_s
 
 		end
+
+		puts "count files: " + files.count.to_s
+		puts "count pictures: " + count_image.to_s
+		puts "count classes: " + classes.to_s
+
     end
       
     private

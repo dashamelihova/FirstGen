@@ -18,7 +18,12 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
-TODO: Write usage instructions here
+To use this GEM, you need to paste the path to your directory as input. The output of this code will be metrics:
+1) Amount of lines in file
+2) Amount of files (and it's extensions such as .cpp, .txt, .rb and e.t.c.)
+3) Amount of methods in file
+4) Amount of files-images (.png, .jpg and e.t.c.)
+5) The destination directoty (if there're different folders in path)
 
 ## Development
 
