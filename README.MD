@@ -20,7 +20,7 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
- нашем геме существует единственный класс, который содержить имя папки для которой мы будем считать метрику. И в классе есть один публичный метод который создает файл со всей посчитаной метрикой
+In our GEM there exists the only class that will contain path to our directory in which code will count metrics. Also there're one public class that will create .txt file with all counted metrics
 
 ## Development
 
