@@ -22,21 +22,28 @@ module Grup
 			end
 			
 		end
-		#puts count_jpg # количество изображений
+		
+		metrics_data = {
+			count_files: files.count,
+			count_pictures: count_image,
+			count_classes: classes
+		}
+
 		File.open(output_file, 'w')do |file|
 
-			file.puts "count files: " + files.count.to_s
-			file.puts "count pictures: " + count_image.to_s
-			file.puts "count classes: " + classes.to_s
+			file.puts "count files: #{metrics_data[:count_files]}"
+			file.puts "count pictures: #{metrics_data[:count_pictures]}"
+			file.puts "count classes: #{metrics_data[:count_classes]}"
 
 		end
 
-		puts "count files: " + files.count.to_s
-		puts "count pictures: " + count_image.to_s
-		puts "count classes: " + classes.to_s
+		puts "count files: #{metrics_data[:count_files]}"
+		puts "count pictures: #{metrics_data[:count_pictures]}"
+		puts "count classes: #{metrics_data[:count_classes]}"
 		puts
+	    return metrics_data	
     end
-    
+
 	#comparing reports
 	def compare_reports(report_path_1, report_path_2)
 		report_1 = File.read(report_path_1)
