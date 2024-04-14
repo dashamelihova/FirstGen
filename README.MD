@@ -21,6 +21,19 @@ If bundler is not being used to manage dependencies, install the gem by executin
 ## Usage
 
 In our GEM there exists the only class that will contain path to our directory in which code will count metrics. Also there're one public class that will create .txt file with all counted metrics
+Available methods:
+Use new to create a class object, specify the path to your codebase directory instead of 'new_dir':
+    ```
+    object = Grup::Calculator.new('new_dir')
+    ```
+Use the method calculate_metrics to calculate the metric, instead of "new2.txt" specify the desired name of the report file:
+    ```
+    object.calculate_metrics("new2.txt")
+    ```
+Use the method compare_reports to compare two reports. The differences of the reports will be displayed in the terminal:
+    ```
+    object.compare_reports("new.txt", "new2.txt")
+    ```
 
 ## Development
 
