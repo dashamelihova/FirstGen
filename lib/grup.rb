@@ -42,41 +42,7 @@ module Grup
 		puts "count classes: #{metrics_data[:count_classes]}"
 		puts
 	    return metrics_data	
-    end
-
-	#comparing reports
-	def compare_reports(report_path_1, report_path_2)
-		report_1 = File.read(report_path_1)
-		report_2 = File.read(report_path_2)
-	  
-		# Парсим данные из отчетов
-		data_1 = parse_report(report_1)
-		data_2 = parse_report(report_2)
-	  
-		# Сравниваем данные
-		compare_data(data_1, data_2)
-	  end
-	  
-	def parse_report(report)
-		data = {}
-		report.each_line do |line|
-		  key, value = line.split(': ')
-		  data[key] = value.to_i
-		end
-		data
-	end
-	  
-	def compare_data(data_1, data_2)
-		puts "Comparison Results:"
-		puts "Key\t\t| Report 1\t| Report 2"
-		data_1.each do |key, value|
-		  if data_2[key]
-			if data_1[key] != data_2[key]
-			  puts "#{key}\t| #{data_1[key]}\t\t|\t#{data_2[key]}"
-			end
-		  end
-		end
-	end  
+    end  
 
     private
 	
