@@ -1,3 +1,3 @@
-count files: 14
-count pictures: 5
-count classes: 7
+count files: 0
+count pictures: 0
+count classes: 0

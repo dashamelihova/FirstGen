@@ -10,6 +10,9 @@ module Grup
     end
 
     def calculate_metrics(output_file)
+		if !Dir.exist?(@code_dir)
+			raise Exception.new("Directory '#{@code_dir}' does not exist.")
+		  end
 		files = Dir.glob(File.join(@code_dir, '**', '*.{rb,png,jpg,webp,webm,py,java}'))
 		classes = 0
 		count_image = 0
