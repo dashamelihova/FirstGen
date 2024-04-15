@@ -30,10 +30,6 @@ Use the method calculate_metrics to calculate the metric, instead of "new2.txt" 
     ```
     object.calculate_metrics("new2.txt")
     ```
-Use the method compare_reports to compare two reports. The differences of the reports will be displayed in the terminal:
-    ```
-    object.compare_reports("new.txt", "new2.txt")
-    ```
 
 ## Development
 
