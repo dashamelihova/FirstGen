@@ -1,3 +1,4 @@
 count files: 3
 count pictures: 1
 count classes: 0
+count lines: 0

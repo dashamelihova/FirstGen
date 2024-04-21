@@ -1,3 +1,4 @@
 count files: 14
 count pictures: 5
 count classes: 7
+count lines: 93
